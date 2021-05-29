@@ -24,6 +24,7 @@ public class UserManager implements UserService{
 	@Override
 	public List<User> getAll() {
 
+ 
 		return this.userDao.findAll();
 	}
 
