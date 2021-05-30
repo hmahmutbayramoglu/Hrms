@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired; //beans => proje 
 import org.springframework.stereotype.Service;
 
 import Waps.hrms.business.abstracts.UserService;
+import Waps.hrms.core.utilities.results.DataResult;
+import Waps.hrms.core.utilities.results.SuccessDataResult;
 import Waps.hrms.dataAccess.abstracts.UserDao;
 import Waps.hrms.entities.concretes.User;
 
@@ -22,10 +24,10 @@ public class UserManager implements UserService{
 	}
 
 	@Override
-	public List<User> getAll() {
+	public DataResult<List<User>> getAll() {
 
- 
-		return this.userDao.findAll();
+		var result = this.userDao.findAll();
+		return new SuccessDataResult<List<User>>(result) ;
 	}
 
 }

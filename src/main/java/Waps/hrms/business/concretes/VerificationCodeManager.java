@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Waps.hrms.business.abstracts.VerificationCodeService;
+import Waps.hrms.core.utilities.results.DataResult;
+import Waps.hrms.core.utilities.results.SuccessDataResult;
 import Waps.hrms.dataAccess.abstracts.VerificationCodeDao;
 import Waps.hrms.entities.concretes.VerificationCode;
 
@@ -23,9 +25,10 @@ public class VerificationCodeManager implements VerificationCodeService{
 	
 	
 	@Override
-	public List<VerificationCode> getAll() {
+	public DataResult<List<VerificationCode>> getAll() {
  
-		return this.verificationCodeDao.findAll();
+		var result =  this.verificationCodeDao.findAll();
+		return new SuccessDataResult<List<VerificationCode>>(result);
 	}
 
 }

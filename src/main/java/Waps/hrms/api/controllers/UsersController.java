@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Waps.hrms.business.abstracts.UserService;
+import Waps.hrms.core.utilities.results.DataResult;
 import Waps.hrms.entities.concretes.User;
 
 
@@ -26,7 +27,7 @@ public class UsersController {
 	}
 	
 	@GetMapping("/getall")
-	public List<User> getAll(){
+	public DataResult<List<User>> getAll(){
 		return this.userService.getAll();
 	}
 	

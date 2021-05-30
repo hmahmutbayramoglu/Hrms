@@ -1,13 +1,15 @@
 package Waps.hrms.business.abstracts;
 
+
 import java.util.List;
 
+import Waps.hrms.core.utilities.results.DataResult;
 import Waps.hrms.entities.concretes.User;
 
 
 
 public interface UserService {
 
-	List<User> getAll();
+	DataResult<List<User>> getAll();
 	
 }

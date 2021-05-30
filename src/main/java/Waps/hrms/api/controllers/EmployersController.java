@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Waps.hrms.business.abstracts.EmployerService;
+import Waps.hrms.core.utilities.results.DataResult;
 import Waps.hrms.entities.concretes.Employer;
 
 @RestController
@@ -24,7 +25,7 @@ public class EmployersController {
 	}
 	
 	@GetMapping("/getall")
-	public List<Employer> getAll(){
+	public DataResult<List<Employer>> getAll(){
 		
 		return this.employerService.getAll();
 	}

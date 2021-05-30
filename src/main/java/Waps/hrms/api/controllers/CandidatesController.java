@@ -1,13 +1,18 @@
 package Waps.hrms.api.controllers;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Waps.hrms.business.abstracts.CandidateService;
+import Waps.hrms.core.utilities.results.DataResult;
+import Waps.hrms.core.utilities.results.Result;
 import Waps.hrms.entities.concretes.Candidate;
 
 @RestController
@@ -24,9 +29,15 @@ public class CandidatesController {
 	}
 	
 	@GetMapping("/getall")
-	public List<Candidate> getAll(){
+	public 	DataResult<List<Candidate>> getAll(){
 		
 		return this.candidateService.getAll();
+	}
+	
+	@PostMapping("/add")
+	public 	Result add(@RequestBody  Candidate candidate){
+ 
+		return this.candidateService.add(candidate);
 	}
 	
 }

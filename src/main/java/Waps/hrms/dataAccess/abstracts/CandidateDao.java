@@ -6,4 +6,8 @@ import Waps.hrms.entities.concretes.Candidate;
 
 public interface CandidateDao extends JpaRepository<Candidate, Integer>{
 
+	
+	Candidate findByEmail(String emailAddress);
+	
+	Candidate findByNationalityId(String nationalityId);
 }
