@@ -4,13 +4,12 @@ import java.util.List;
 
 import Waps.hrms.core.utilities.results.DataResult;
 import Waps.hrms.core.utilities.results.Result;
-import Waps.hrms.entities.concretes.Employee;
+import Waps.hrms.entities.concretes.JobTitle;
+ 
 
-public interface EmployeeService {
+public interface JobTitleService {
 
+	DataResult<List<JobTitle>> getAll();
 	
-
-	DataResult<List<Employee>> getAll();
-	
-	Result add(Employee employee);
+	Result add(JobTitle jobTitle);
 }

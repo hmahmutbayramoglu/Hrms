@@ -40,8 +40,8 @@ public class User {
 	@Column(name="is_active", columnDefinition = "boolean default true") 
 	private boolean isActive;
 	
-	@Column(name="date", columnDefinition = "Date defult date")
-	private LocalDate date=LocalDate.now();
+	@Column(name="date")
+	private LocalDate date;
 
 	//default false yani silinmedi
 	@Column(name="is_deleted",columnDefinition = "boolean default false")

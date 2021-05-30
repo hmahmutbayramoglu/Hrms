@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import Waps.hrms.business.abstracts.CandidateService;
 import Waps.hrms.core.utilities.adapters.mernis.UserCheckService;
 import Waps.hrms.core.utilities.results.DataResult;
@@ -80,8 +79,8 @@ public class CandidateManager implements CandidateService{
 	private boolean freeSpaceControl(Candidate candidate) {
 
 		if(candidate.getFirstName().isEmpty() || candidate.getLastName().isEmpty() || candidate.getEmail().isEmpty() || 
-				candidate.getPassword().isEmpty() || candidate.getIsDeleted() == null || candidate.getDate().equals(null) ||
-				candidate.getIsDeleted() == null || candidate.getNationalityId().isEmpty() || candidate.getDateOfBirth().equals(null) ||
+				candidate.getPassword().isEmpty() || candidate.getIsDeleted() == null || candidate.getDate() == null ||
+				candidate.getIsDeleted() == null || candidate.getNationalityId().isEmpty() || candidate.getDateOfBirth()== null ||
 						candidate.getIsEmailVerified() == null
 				) {
 			return false;

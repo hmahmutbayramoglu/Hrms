@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import Waps.hrms.business.abstracts.EmployeeService;
 import Waps.hrms.core.utilities.results.DataResult;
@@ -36,7 +35,7 @@ public class EmployeeManager implements EmployeeService{
 
 
 	@Override
-	public Result add(@RequestBody Employee employee) {
+	public Result add(Employee employee) {
 		this.employeeDao.save(employee);
 		return new SuccessResult("Added Employee :) ");
 	}

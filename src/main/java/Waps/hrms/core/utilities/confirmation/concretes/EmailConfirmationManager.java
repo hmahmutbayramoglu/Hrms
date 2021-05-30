@@ -10,16 +10,17 @@ import Waps.hrms.core.utilities.confirmation.abstracts.ConfirmationService;
 public class EmailConfirmationManager implements ConfirmationService{
 
 
-  void sendVerificationCode(String email) { 
+	void sendVerificationCode(String email) { 
 		UUID uuid = UUID.randomUUID();
 		String verificationLink = "https://hrmsverificationmail/" + uuid.toString();
 		
 	}
-
- 
+  
+   
 	public String codeGenerator() {
 		UUID uuid = UUID.randomUUID();
 		String verificationCode = uuid.toString();
 		return verificationCode;
 	}
+	
 }

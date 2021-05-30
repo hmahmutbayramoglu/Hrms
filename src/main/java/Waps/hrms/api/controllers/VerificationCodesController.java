@@ -13,12 +13,12 @@ import Waps.hrms.entities.concretes.VerificationCode;
 
 @RestController
 @RequestMapping("/api/verificationCodes")
-public class VerificationCodeController {
+public class VerificationCodesController {
 	
 	private VerificationCodeService verificationCodeService;
 	
 	@Autowired
-	public VerificationCodeController(VerificationCodeService verificationCodeService) {
+	public VerificationCodesController(VerificationCodeService verificationCodeService) {
 		super();
 		this.verificationCodeService = verificationCodeService;
 	}
