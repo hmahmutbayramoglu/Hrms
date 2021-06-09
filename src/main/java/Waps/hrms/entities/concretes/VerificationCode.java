@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+ 
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "verification_codes")
 @AllArgsConstructor
 @NoArgsConstructor
-public class VerificationCode {
+public class VerificationCode { 
 
 	
 	public VerificationCode(int userId, String code, LocalDate expiredDate) {
@@ -36,11 +37,14 @@ public class VerificationCode {
 	@Column(name="id")
 	private int id;
 	
+	
 	@Column(name="user_id")
 	private int userId;
 	
+ 
 	@Column(name="email_verification_code")
 	private String emailVerificationCode; 
+  
 	
 	@Column(name="created_date")//oluşturulma tarihini bu zaman yap
 	private LocalDate createdDate=LocalDate.now();

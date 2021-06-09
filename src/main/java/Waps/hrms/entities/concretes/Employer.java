@@ -8,7 +8,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,18 +28,24 @@ import lombok.NoArgsConstructor;
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","job_postings"})
 public class Employer extends User{
 
+	
+	@NotNull
 	@Column(name = "web_site")
 	private String webSite;
 	
+	@NotNull
 	@Column(name = "phone_number")
 	private String phoneNumber;
 	
+	@NotNull
 	@Column(name = "is_email_verified")
 	private Boolean isEmailVerified;
 	
+	@NotNull
 	@Column(name = "is_verified_by_employee")
 	private Boolean isVerifiedByEmployee;
 
+	@NotNull
 	@Column(name = "company_name")
 	private String companyName;
 	

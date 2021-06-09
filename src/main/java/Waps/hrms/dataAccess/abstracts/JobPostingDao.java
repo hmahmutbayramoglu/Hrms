@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
-import Waps.hrms.core.utilities.results.Result;
+
 import Waps.hrms.entities.concretes.JobPosting;
 import Waps.hrms.entities.dtos.JobPostingWithEmployerDto;
  
